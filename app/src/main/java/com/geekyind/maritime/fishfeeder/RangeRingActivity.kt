@@ -33,14 +33,6 @@ class RangeRingActivity : AppCompatActivity(), TextureView.SurfaceTextureListene
         var settingsButton= findViewById<Button>(R.id.btnSettings)
         settingsButton.setOnClickListener(this)
 
-
-//        val videoView = findViewById<VideoView>(R.id.liveVideoView)
-//        val mediaController = MediaController(this)
-//        mediaController.setAnchorView(videoView)
-//        videoView.setMediaController(mediaController)
-//        videoView.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.fake_drone_feed))
-//        videoView.start()
-
         val np = findViewById<NumberPicker>(R.id.altitudeDesired)
         np.minValue = 0
         np.maxValue = 200

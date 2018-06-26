@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_splash_background"
+    tools:context=".RangeRingActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="102dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="3dp"
+        android:text="@string/action_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnBaitMode"
+        app:layout_constraintTop_toTopOf="@+id/button3"
+        tools:text="@string/action_settings" />
+
+    <NumberPicker
+        android:id="@+id/azimuthDesired"
+        android:layout_width="72dp"
+        android:layout_height="32dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        app:layout_constraintEnd_toStartOf="@+id/azimuthCurrent"
+        app:layout_constraintStart_toEndOf="@+id/azimuthLabel"
+        app:layout_constraintTop_toBottomOf="@+id/distanceDesired" />
+
+    <NumberPicker
+        android:id="@+id/distanceDesired"
+        android:layout_width="72dp"
+        android:layout_height="32dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        app:layout_constraintEnd_toStartOf="@+id/distanceCurrent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/distanceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/altitudeDesired" />
+
+    <TextView
+        android:id="@+id/desiredLabel"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:text="Desired"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/altitudeDesired"
+        app:layout_constraintEnd_toEndOf="@+id/altitudeDesired"
+        app:layout_constraintStart_toStartOf="@+id/altitudeDesired" />
+
+    <TextView
+        android:id="@+id/azimuthCurrent"
+        android:layout_width="72dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/azimuthDesired"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/azimuthDesired"
+        app:layout_constraintTop_toTopOf="@+id/azimuthDesired" />
+
+    <TextureView
+        android:id="@+id/liveVideoView"
+        android:layout_width="0dp"
+        android:layout_height="217dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/azimuthLabel"
+        android:layout_width="145dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Azimuth"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/azimuthDesired"
+        app:layout_constraintEnd_toStartOf="@+id/azimuthDesired"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/azimuthDesired" />
+
+    <Button
+        android:id="@+id/btnBaitMode"
+        android:layout_width="224dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/bait_mode_button_text"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFishingMode"
+        tools:text="@string/bait_mode_button_text" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="224dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Land"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBaitMode"
+        tools:text="@string/landing_mode_button_text" />
+
+    <Button
+        android:id="@+id/btnFishingMode"
+        android:layout_width="224dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Fish"
+        app:layout_constraintBottom_toTopOf="@+id/btnBaitMode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/azimuthDesired"
+        app:layout_constraintVertical_bias="0.666"
+        tools:text="@string/fishing_mode_button_text" />
+
+    <TextView
+        android:id="@+id/altitudeLabel"
+        android:layout_width="145dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Altitude"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/altitudeDesired"
+        app:layout_constraintEnd_toStartOf="@+id/altitudeDesired"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/altitudeDesired"
+        tools:text="Altitude" />
+
+    <TextView
+        android:id="@+id/distanceLabel"
+        android:layout_width="145dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Distance"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/distanceDesired"
+        app:layout_constraintEnd_toStartOf="@+id/distanceDesired"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/distanceDesired"
+        tools:text="Distance" />
+
+    <NumberPicker
+        android:id="@+id/altitudeDesired"
+        android:layout_width="72dp"
+        android:layout_height="32dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        app:layout_constraintEnd_toStartOf="@+id/altitudeCurrent"
+        app:layout_constraintStart_toEndOf="@+id/altitudeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/liveVideoView" />
+
+    <TextView
+        android:id="@+id/altitudeCurrent"
+        android:layout_width="72dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/altitudeDesired"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/altitudeDesired"
+        app:layout_constraintTop_toTopOf="@+id/altitudeDesired" />
+
+    <TextView
+        android:id="@+id/distanceCurrent"
+        android:layout_width="72dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/distanceDesired"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/distanceDesired"
+        app:layout_constraintTop_toTopOf="@+id/distanceDesired" />
+
+    <TextView
+        android:id="@+id/currentLabel"
+        android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:text="Current"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/altitudeCurrent"
+        app:layout_constraintStart_toStartOf="@+id/altitudeCurrent"
+        app:layout_constraintTop_toTopOf="@+id/desiredLabel" />
+
+
+</android.support.constraint.ConstraintLayout>
